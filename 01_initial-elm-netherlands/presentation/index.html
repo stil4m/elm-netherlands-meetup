@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Elm Netherlands - Initial Elm</title>
+
+    <meta name="description" content="Elm Netherlands - Initial Elm">
+    <meta name="author" content="Mats Stijlaart">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="bower_components/avisi-reveal-js-template/avisi.css" id="theme">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <style>
+        pre {
+            padding: 5px !important;
+            max-width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="company"></div>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+            <section>
+                <h1>Elm Netherlands</h1>
+                <h2>Initial Elm Netherlands</h2>
+                <p>
+                    <small>2016-08-03</small>
+                </p>
+            </section>
+
+            <!-- Introduction -->
+            <section>
+                <section>
+                    <h2>Introduction</h2>
+                </section>
+                <section>
+                    <h3>Elm</h3>
+                </section>
+                <section>
+                    <h3>Goals</h3>
+                    <ul>
+                        <li>Build a community</li>
+                        <li>Adjust to the needs</li>
+                        <li>Have some fun!</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Today</h3>
+                </section>
+            </section>
+
+            <!-- What is Elm -->
+            <section>
+                <section>
+                    <h2>What?</h2>
+                </section>
+                <section>
+                    <h3>Buzzword Bingo</h3>
+                    <ul>
+                        <li>Functional</li>
+                        <li>Immutable</li>
+                        <li>Staticly typed</li>
+                        <li>Strongly typed</li>
+                        <li>Pure</li>
+                        <li>Virtual DOM</li>
+                        <li>Memoization</li>
+                    </ul>
+                </section>
+                <section>
+                    <table>
+                        <tr>
+                            <td style="border-bottom: 0px solid;">
+                                <img width="300" src="https://avatars2.githubusercontent.com/u/1658058?v=3&s=460">
+                            </td>
+                            <td style="border-bottom: 0px solid;">
+                                <img width="300" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Harvard_Wreath_Logo_1.svg/1051px-Harvard_Wreath_Logo_1.svg.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img width="300" src="http://warehouse.lococock.com/free-download/logo/prezi/Prezi-Logo-Transparent-1080p.svg">
+                            </td>
+                            <td>
+                                <img width="300" src="http://edtechreview.in/images/noredink_review_tool_for_grammar_and_writing_skills.png">
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </section>
+
+            <!-- How -->
+            <section>
+                <section>
+                    <h2>How</h2>
+                </section>
+                <section>
+                    <h3>Numbers</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/Numbers.elm"></pre>
+                </section>
+                <section>
+                    <h3>Booleans</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/Bool.elm"></pre>
+                </section>
+                <section>
+                    <h3>String</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/Strings.elm"></pre>
+                </section>
+                <section>
+                    <h3>List</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/Lists.elm"></pre>
+                </section>
+                <section>
+                    <h3>Functions</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/Functions.elm"></pre>
+                </section>
+                <section>
+                    <h3>Records</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/Records.elm"></pre>
+                </section>
+                <section>
+                    <h3>Algebraic Data Types</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/ADT.elm"></pre>
+                </section>
+                <section>
+                    <h3>Maybe</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/Maybe.elm"></pre>
+                </section>
+            </section>
+
+            <!-- Why  -->
+            <section>
+                <section>
+                    <h2>Why?</h2>
+                </section>
+
+                <section>
+                    <img width="600" src="https://cdn.meme.am/instances/56749672.jpg">
+                </section>
+                <section>
+                    <blockquote>
+                        Runtime exceptions reduced to
+                        <br> (nearly) zero
+                    </blockquote>
+                </section>
+                <section>
+                    <blockquote>
+                        Easier to share with colleagues.
+                    </blockquote>
+                </section>
+                <section>
+                    <blockquote>
+                        Batteries included
+                    </blockquote>
+                    <ul>
+                        <li>The Elm Architecture (TEA)</li>
+                        <li>No HTML and JS, just Elm</li>
+                    </ul>
+                </section>
+                <section>
+                    <blockquote>
+                        Designed to reduce complexity and solve common problems
+                    </blockquote>
+                </section>
+                <section>
+                    <blockquote>
+                        We can assume certain things from our software, thus it would require less testing.
+                    </blockquote>
+                </section>
+            </section>
+
+            <!-- Demo -->
+            <section>
+                <section>
+                    <h2>Demo</h2>
+                    <p>
+                        We are going to build a simple application<br> using The Elm Architecture
+                    </p>
+                </section>
+                <section>
+                    <h3>Recap</h3>
+                    <ul>
+                        <li>It is a small program</li>
+                        <li>We cant break it, only implement the specs wrong</li>
+                        <li>It is modular</li>
+                        <li>Easy to extend</li>
+                        <li>The Elm Architecture: <code>init</code>, <code>view</code> and <code>update</code></li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Why not -->
+            <section>
+                <section>
+                    <h2>'Why not'</h2>
+                    <ul>
+                        <li>0.15 -> 0.16 -> 0.17</li>
+                        <li>Documentation may be scarce</li>
+                        <li>It must fit the model</li>
+                        <li>There are not much people that know Elm (yet)</li>
+                        <li>'There is a library for that'</li>
+                        <li>Lack of tooling</li>
+                    </ul>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>Source</h2>
+                    <ul>
+                        <li><a href="http://elm-lang.org">http://elm-lang.org</a></li>
+                        <li><a href="https://github.com/isRuslan/awesome-elm">https://github.com/isRuslan/awesome-elm</a></li>
+                        <li><a href="http://www.elmweekly.nl/">http://www.elmweekly.nl/</a></li>
+                        <li><a href="http://elmlang.herokuapp.com/">Elm Lang Slack</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+
+                <section>
+                    <h2>Connect</h2>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+    <script type="text/javascript">
+        var promises = $("pre[data-snippet]").map(function(i, y) {
+            return new Promise(function(accept, reject) {
+                var el = $(y);
+                $.ajax({
+                    url: el.data('snippet'),
+                    method: 'GET',
+                    success: function(code) {
+                        var type = el.data('snippet-type');
+                        el.addClass(type).html("<code>" + code + "</code>");
+                        accept();
+                    },
+                    error: function() {
+                        debugger;
+                        console.log("Error!");
+                    }
+                });
+            })
+        });
+
+        Promise.all(promises).then(function() {
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                slideNumber: true,
+                transition: 'slide',
+                dependencies: [{
+                    src: 'bower_components/reveal.js/plugin/highlight/highlight.js',
+                    async: false,
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }]
+            })
+        });
+    </script>
+
+</body>
+
+</html>

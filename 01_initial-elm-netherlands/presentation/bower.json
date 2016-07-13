@@ -1,0 +1,24 @@
+{
+  "name": "techday-firebase",
+  "homepage": "https://github.com/stil4m/techday-firebase",
+  "authors": [
+    "Mats Stijlaart <m.stijlaart@avisi.nl>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "^3.2.0",
+    "avisi-reveal-js-template": "https://github.com/stil4m/avisi-reveal-js-template.git",
+    "jquery": "^2.2.0"
+  }
+}
+
