@@ -13,6 +13,70 @@ import Html.App exposing (beginnerProgram)
   4. update -> The transitions that the component can have.
   5. view -> A UI representation of your component given the current state.
 -}
-main : Html String
+main : Program Never
 main =
-  text "Hello Elm Netherlands!"
+    beginnerProgram
+        { model = model
+        , update = update
+        , view = view
+        }
+
+
+type alias Model =
+    Color
+
+
+type Color
+    = Green
+    | Red
+
+
+type Msg
+    = SetGreen
+    | SetRed
+
+
+model : Model
+model =
+    Green
+
+
+update : Msg -> Model -> Model
+update msg _ =
+    case msg of
+        SetGreen ->
+            Green
+
+        SetRed ->
+            Red
+
+
+view : Model -> Html Msg
+view model =
+    let
+        colorText =
+            colorToString model
+    in
+        div []
+            [ div [ style (lightStyle colorText) ] []
+            , button [ onClick SetGreen ] [ text (colorToString Green) ]
+            , button [ onClick SetRed ] [ text (colorToString Red) ]
+            ]
+
+
+colorToString : Color -> String
+colorToString color =
+    case color of
+        Red ->
+            "red"
+
+        Green ->
+            "green"
+
+
+lightStyle : String -> List ( String, String )
+lightStyle color =
+    [ ( "width", "50px" )
+    , ( "height", "50px" )
+    , ( "background", color )
+    ]
