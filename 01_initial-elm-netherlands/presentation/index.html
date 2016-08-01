@@ -19,12 +19,6 @@
     <link rel="stylesheet" href="bower_components/avisi-reveal-js-template/avisi.css" id="theme">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
-    <style>
-        pre {
-            padding: 5px !important;
-            max-width: 700px;
-        }
-    </style>
 </head>
 
 <body>
@@ -198,20 +192,68 @@
                     </p>
                 </section>
                 <section>
-                    TODO Model
+                    <h3>Model the problem</h3>
+                    <p>
+                        TODO Whiteboard sketch traffic light with model
+                    </p>
                 </section>
                 <section>
-                    TODO Action
+                    <h3>Model the problem</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/lights/model.elm"></pre>
                 </section>
                 <section>
-                    TODO model, update, view
+                    <h3>Which actions should I handle?</h3>
+                    <p>
+                        TODO Whiteboard sketch traffic light with actions
+                    </p>
+                </section>
+                <section>
+                    <h3>Which actions should I handle?</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/lights/actions.elm"></pre>
+                </section>
+                <section>
+                    <h3><code>model</code>, <code>update</code> and <code>view</code></h3>
+                    <img src="images/flip_book.jpg" alt="" />
+                </section>
+                <section>
+                    <h3>Initial model</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/lights/init.elm"></pre>
+                </section>
+                <section>
+                    <h3>Update</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/lights/update.elm"></pre>
+                </section>
+                <section>
+                    <h3>View</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/lights/view.elm"></pre>
+                </section>
+                <section>
+                    <h3>Utils</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/lights/utils.elm"></pre>
+                </section>
+                <section>
+                    <img src="images/show_me.jpg" alt="" />
+                </section>
+                <section>
+                    <img src="images/curiosity.jpg" alt="" />
+                </section>
+                <section>
+                    <img src="images/billy-mays-here.jpeg" alt="" />
+                </section>
+                <section>
+                    <ul>
+                        <li><strike>Easy</strike> Safe to extend</li>
+                        <li class="fragment">Reusable</li>
+                        <li class="fragment">Purity enables property based testing</li>
+                        <li class="fragment">Encapsulation</li>
+                    </ul>
                 </section>
                 <section>
                     <h3>Recap</h3>
                     <ul>
                         <li class="fragment">We cant break it, only implement the specs wrong</li>
                         <li class="fragment">It is modular</li>
-                        <li class="fragment">Easy to extend</li>
+                        <li class="fragment">Easy and safe to extend</li>
                         <li class="fragment">The Elm Architecture: <code>model</code>, <code>view</code> and <code>update</code></li>
                     </ul>
                 </section>

@@ -1,4 +1,4 @@
-module Lights exposing (..)
+module Light exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -28,11 +28,12 @@ type alias Model =
 
 type Color
     = Green
+    | Orange
     | Red
-
 
 type Msg
     = SetGreen
+    | SetOrange
     | SetRed
 
 
@@ -47,6 +48,9 @@ update msg _ =
         SetGreen ->
             Green
 
+        SetOrange ->
+            Orange
+
         SetRed ->
             Red
 
@@ -60,6 +64,7 @@ view model =
         div []
             [ div [ style (lightStyle colorText) ] []
             , button [ onClick SetGreen ] [ text (colorToString Green) ]
+            , button [ onClick SetOrange ] [ text (colorToString Orange) ]
             , button [ onClick SetRed ] [ text (colorToString Red) ]
             ]
 
@@ -67,11 +72,14 @@ view model =
 colorToString : Color -> String
 colorToString color =
     case color of
-        Red ->
-            "red"
-
         Green ->
             "green"
+
+        Orange ->
+            "orange"
+
+        Red ->
+            "red"
 
 
 lightStyle : String -> List ( String, String )
@@ -80,3 +88,12 @@ lightStyle color =
     , ( "height", "50px" )
     , ( "background", color )
     ]
+
+
+allColors : List Color
+allColors =
+  [Red,Orange,Green]
+
+otherColors : Color -> List Color -> List Color
+otherColors color colors =
+  List.filter (\x -> not (x == color)) colors
