@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Elm Netherlands - Tooling</title>
+
+    <meta name="description" content="Elm Netherlands - Tooling - Know your code">
+    <meta name="author" content="Mats Stijlaart">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="bower_components/avisi-reveal-js-template/avisi.css" id="theme">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <style media="screen">
+        div.graph-block {
+            display: inline-block;
+            width: 250px;
+            height: 50px;
+            padding: 70px 10px;
+            margin: 10px;
+            vertical-align: middle;
+            background: red;
+            border-radius: 10px;
+        }
+
+        div.graph-block.center-graph-block {
+            background: rgb(96, 181, 204);
+        }
+
+        div.graph-block.light-graph-block-1 {
+            background: rgb(240, 173, 0);
+        }
+
+        div.graph-block.light-graph-block-2 {
+            background: rgb(127, 209, 59);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="company"></div>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+            <section>
+                <p>
+                    <a href="https://twitter.com/elmnetherlands">@ElmNetherlands</a>
+                </p>
+                <img src="images/logo-print.png" width="150" alt="" />
+                <h2>"Know Your Code"</h2>
+                <p>
+                    <small>2017-03-08, Mats Stijlaart (<a href="https://twitter.com/stil4m">@stil4m</a>)</small>
+                </p>
+            </section>
+
+            <section>
+                <img style="border:none; box-shadow: none; background: white; padding: 15px;" src="images/avisi.png" width="400">
+                <div>
+                    <ul class="fragment" style="width: 400px">
+                        <li>Pushed Elm</li>
+                        <li>Four teams use Elm</li>
+                        <li>Elm Guild</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Introduction -->
+            <section>
+                <section>
+                    <table>
+                        <tr>
+                            <td class="fragment">"Code is the Easy Part"</td>
+                            <td class="fragment">Language point of view</td>
+                        </tr>
+                        <tr class="fragment">
+                            <td>"Code is the Important Part"</td>
+                            <td>Consumer point of view</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h3>"A tool that is not there-ish"</h3>
+                    <div class="fragment">
+                        <div>
+                            <div class="graph-block light-graph-block-1 fragment">
+                                Idiomatic code
+                            </div>
+                        </div>
+                        <div>
+                            <div class="graph-block light-graph-block-2 fragment">
+                                Code Quality
+                            </div>
+                            <div class="graph-block center-graph-block">
+                                Syntax
+                            </div>
+                            <div class="graph-block light-graph-block-2 fragment">
+                                Education
+                            </div>
+                        </div>
+                        <div>
+                            <div class="graph-block light-graph-block-1 fragment">
+                                "Dreamland"
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Idiomatic code -->
+            <section>
+                <section>
+                    <h2>Idiomatic Code</h2>
+                </section>
+                <section>
+                    <h3>Syntactic Structure</h3>
+                    <div style="margin: 0 40px;">
+                        <pre data-snippet-type="elm" data-snippet="code/prefix-vs-infix.elm"></pre>
+                        <p>Which form <u>would</u> you use?</p>
+                        <p class="fragment">Which form <u>should</u> you use?</p>
+                    </div>
+                </section>
+                <section>
+                    <div style="margin: 0 40px;">
+                        <pre data-snippet-type="elm" data-snippet="code/prefix-vs-infix-2.elm"></pre>
+                        <p>But it is not that easy...</p>
+                    </div>
+                </section>
+                <section>
+                    <h3>Question</h3>
+                    <p>"What is idiomatic Elm code?"</p>
+                    <p class="fragment">It is not 42</p>
+                    <br>
+                    <br>
+                    <div class="fragment">
+                        <p>I believe "it depends"</p>
+                        <ul>
+                            <li>Team qualities</li>
+                            <li>Complexity of code</li>
+                            <li><i>Probably a bit more...</i></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <img src="images/change-code-effects.jpg" alt="" />
+                </section>
+                <section>
+                    <pre data-snippet-type="elm" data-snippet="code/simple-nothing-case.elm"></pre>
+                    <p>Seems the same right?</p>
+                </section>
+                <section>
+                    <pre data-snippet-type="elm" data-snippet="code/bad-idiomatic-maybe.elm"></pre>
+                    <p class="fragment">
+                        The value constructed for the <code>Maybe.withDefault</code> is always computed!
+                    </p>
+                </section>
+                <section>
+                    <pre data-snippet-type="javascript" data-snippet="code/compiled-maybe-1.jsx"></pre>
+                    <div class="fragment">
+                        <pre data-snippet-type="javascript" data-snippet="code/compiled-maybe-2.jsx"></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Idomatic Code</h3>
+                    <ul style="font-size:90%">
+                        <li>Not yet defined. I would like to start the discussion.</li>
+                        <li>Be consistent. Especially if you try to scale within a team.</li>
+                        <li>Be careful what you do. What seems the same, is not always the same.</li>
+                    </ul>
+                </section>
+
+            </section>
+
+            <!-- Code Quality  -->
+            <section>
+                <section>
+                    <h2>Quality Code</h2>
+                </section>
+                <section>
+                    <h3>Some questions?</h3>
+                </section>
+                <section>
+                    <p>Do you use the <code>Random</code> package?</p>
+                    <div class="fragment">
+                        <blockquote>
+                            If you use any seed less than 53,668 and generate one bool, it will be True – if you're using core's Random module. More sophisticated statistical tests spot patterns in the "random" numbers almost immediately.
+                        </blockquote>
+                        <a href="http://package.elm-lang.org/packages/mgold/elm-random-pcg/4.0.2">
+                            <i>Package <code>mgold/elm-random-pcg</code></i>
+                        </a>
+                    </div>
+                </section>
+                <section>
+                    <p>Have you ever used <code>Regex.regex</code> with a variable argument?</p>
+                    <div class="fragment">
+                        <pre data-snippet-type="javascript" data-snippet="code/failing-regex.elm"></pre>
+                    </div>
+                </section>
+                <section>
+                    <blockquote>
+                        We need something that helps us "know stuff" about our code, and encode this in tooling, CI and IDEs.
+                    </blockquote>
+                </section>
+                <section>
+                    <h3>Some 'smelly' code</h3>
+                </section>
+                <section>
+                    <pre>
+ elm-package.json
+ src/Models.elm
+ src/Decoders.elm
+ src/Rest.elm
+ src/MyView.elm
+                      </pre>
+                </section>
+                <section>
+                    <pre data-snippet-type="javascript" data-snippet="code/encapsulation-models.elm"></pre>
+                </section>
+                <section>
+                    <pre data-snippet-type="javascript" data-snippet="code/encapsulation-decoders.elm"></pre>
+                </section>
+                <section>
+                    <pre data-snippet-type="javascript" data-snippet="code/encapsulation-view.elm"></pre>
+                </section>
+                <section>
+                    <pre data-snippet-type="javascript" data-snippet="code/encapsulation-view-refactored.elm"></pre>
+                </section>
+                <section>
+                    <p>The code elements have 'distance'</p>
+                    <div class="fragment">
+                        <code>viewPerson    <-- small -->    canBuyBeer</code>
+                        <code>canBuyBeer    <-- big -->    type Person</code>
+                    </div>
+                    <div class="fragment">
+                        <br>
+                        <p>Wouldn't we like:</p>
+                        <code>viewPerson    <-- big -->    canBuyBeer</code>
+                        <code>canBuyBeer    <-- small -->    type Person</code>
+                    </div>
+                </section>
+                <section>
+                    <h3>'Better' code</h3>
+                    <pre data-snippet-type="javascript" data-snippet="code/encapsulation-person-module.elm"></pre>
+                    <p>Can we automatically recognize 'bad' design?</p>
+                </section>
+                <section>
+                    <h3>What else would we need?</h3>
+                    <ul>
+                        <li class="fragment">Dead code</li>
+                        <li class="fragment">Big functions</li>
+                        <li class="fragment">Duplications (within project and ecosystem)</li>
+                        <li class="fragment"><i>And whatever helps you</i></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Code Quality</h3>
+                    <ul>
+                        <li>Hard to know if you do it 'right'.</li>
+                        <li>We can improve on this with the appropiate tools.</li>
+                        <li>For now we have to do it by eye.</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <section>
+                    <h2>Education</h2>
+                </section>
+                <section>
+                    <h3>elm-analyse</h3>
+                    <a href="https://github.com/stil4m/elm-analyse">https://github.com/stil4m/elm-analyse</a>
+                </section>
+                <section>
+                    <h3>Improve code</h3>
+                    <ul>
+                        <li class="fragment">Learn by example. "Where to put parens?"</li>
+                        <li class="fragment">Redefining variables</li>
+                        <li class="fragment">Unused stuff</li>
+                        <li class="fragment">Use in CI</li>
+                    </ul>
+                </section>
+                <section>
+                </section>
+            </section>
+
+            <!-- Dreamland -->
+            <section>
+                <section>
+                    <h2>Dreamland</h2>
+                </section>
+                <section>
+                    <h3>AST</h3>
+                    <ul>
+                        <li class="fragment">Analyse structure of code.</li>
+                        <li class="fragment">Fix code</li>
+                        <li class="fragment">Rewrite code</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Elm on the JVM?</h2>
+                    <pre data-snippet-type="java" data-snippet="code/jvm.java"></pre>
+                </section>
+                <section>
+                    <h3>Mutation Testing?</h3>
+                    <pre data-snippet-type="elm" data-snippet="code/mutation-testing.elm"></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+
+            </section>
+        </div>
+    </div>
+
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+    <script type="text/javascript">
+        var promises = $("pre[data-snippet]").map(function(i, y) {
+            return new Promise(function(accept, reject) {
+                var el = $(y);
+                $.ajax({
+                    url: el.data('snippet'),
+                    method: 'GET',
+                    success: function(code) {
+                        var type = el.data('snippet-type');
+                        el.addClass(type).html("<code>" + code + "</code>")
+                            .find("code")
+                        accept();
+                    },
+                    error: function() {
+                        debugger;
+                        console.log("Error!");
+                    }
+                });
+            })
+        });
+
+        Promise.all(promises).then(function() {
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                slideNumber: true,
+                transition: 'slide',
+                dependencies: [{
+                    src: 'bower_components/reveal.js/plugin/highlight/highlight.js',
+                    async: false,
+                    callback: function() {
+                        hljs.initHighlighting();
+                    }
+                }]
+            })
+        });
+    </script>
+
+</body>
+
+</html>
