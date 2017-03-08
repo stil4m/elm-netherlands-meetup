@@ -1,3 +1,0 @@
-model : Model
-model =
-    Green
