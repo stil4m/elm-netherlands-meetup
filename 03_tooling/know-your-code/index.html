@@ -25,7 +25,7 @@
             width: 250px;
             height: 50px;
             padding: 70px 10px;
-            margin: 10px;
+            margin: 0 0px 10px 0px;
             vertical-align: middle;
             background: red;
             border-radius: 10px;
@@ -158,9 +158,6 @@
                 <section>
                     <pre data-snippet-type="elm" data-snippet="code/simple-nothing-case.elm"></pre>
                     <p>Seems the same right?</p>
-                </section>
-                <section>
-                    <pre data-snippet-type="elm" data-snippet="code/bad-idiomatic-maybe.elm"></pre>
                     <p class="fragment">
                         The value constructed for the <code>Maybe.withDefault</code> is always computed!
                     </p>
@@ -203,11 +200,15 @@
                     </div>
                 </section>
                 <section>
-                    <p>Have you ever used <code>Regex.regex</code> with a variable argument?</p>
-                    <div class="fragment">
-                        <pre data-snippet-type="javascript" data-snippet="code/failing-regex.elm"></pre>
-                    </div>
+                    <p>Have you ever used <code>Regex.regex</code> with a variable?</p>
+                    <img src="images/regex-input.png" width="400">
                 </section>
+                <section>
+                  <div class="fragment">
+                      <pre data-snippet-type="javascript" data-snippet="code/failing-regex.elm"></pre>
+                  </div>
+                </section>
+
                 <section>
                     <blockquote>
                         We need something that helps us "know stuff" about our code, and encode this in tooling, CI and IDEs.
@@ -261,6 +262,7 @@
                         <li class="fragment">Dead code</li>
                         <li class="fragment">Big functions</li>
                         <li class="fragment">Duplications (within project and ecosystem)</li>
+                        <li class="fragment">Dependency graphs</li>
                         <li class="fragment"><i>And whatever helps you</i></li>
                     </ul>
                 </section>
@@ -316,6 +318,14 @@
                     <pre data-snippet-type="elm" data-snippet="code/mutation-testing.elm"></pre>
                 </section>
                 <section>
+                    <h3>Unison?</h3>
+                    <video src="./unison.mp4" controls="true" width=450>
+                    </video>
+                    <div>
+                      <a href="http://unisonweb.org/2015-05-07/about.html">http://unisonweb.org/2015-05-07/about.html</a>
+                    </div>
+                </section>
+                <section>
                     <h3><i>Whatever you can think of...</i></h3>
                 </section>
             </section>
@@ -330,7 +340,8 @@
                     </ul>
                 </section>
                 <section>
-                    <h2>Questions?</h2>
+                    <h2 style="text-transform:initial">@stil4m</h2>
+                    <p>Twitter / Slack / GitHub</p>
                 </section>
             </section>
         </div>
