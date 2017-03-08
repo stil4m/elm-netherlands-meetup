@@ -1,0 +1,8 @@
+update model =
+  let
+    model = { model | counter = model.counter + 1 }
+  in
+    if model.show then
+      { model | model.updated = True }
+    else
+      model

@@ -1,0 +1,9 @@
+max x y =
+  if (x < y) then
+    y
+  else
+    x
+
+
+reverseName record =
+ { record | name = (String.reverse record.name) }
