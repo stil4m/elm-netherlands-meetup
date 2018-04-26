@@ -1,7 +1,5 @@
 type alias Model =
-    Color
+    LightStatus
 
-type Color
-    = Green
-    | Orange
-    | Red
+type alias LightStatus =
+    ...

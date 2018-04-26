@@ -1,3 +1,3 @@
 model : Model
 model =
-    Green
+    ...

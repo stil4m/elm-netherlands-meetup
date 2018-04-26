@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Elm Netherlands - Initial Elm</title>
+    <title>Initial Elm</title>
 
-    <meta name="description" content="Elm Netherlands - Initial Elm">
+    <meta name="description" content="Initial Elm">
     <meta name="author" content="Mats Stijlaart">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -29,23 +29,15 @@
         <div class="slides">
 
             <section>
-                <h2>Initial Elm Netherlands</h2>
+                <h2>Initial Elm</h2>
                 <p>
-                    <small>2016-08-03, Mats Stijlaart (<a href="https://twitter.com/stil4m">@stil4m</a>)</small>
-                </p>
-                <p>
-                  <a href="https://twitter.com/elmnetherlands">@ElmNetherlands</a>
+                    <small>2018-04-26, Mats Stijlaart (<a href="https://twitter.com/stil4m">@stil4m</a>)</small>
                 </p>
                 <img src="images/logo-print.png" width="300" alt="" />
             </section>
 
             <section>
                 <table style="text-align: center">
-                  <tr style="border:none">
-                    <td style="border:none; text-align: center; height: 150px;">
-                      <img src="images/wcc.jpg" style="padding: 15px; background: white;" height="150">
-                    </td>
-                  </tr>
                   <tr style="border:none">
                     <td style="text-align: center">
 
@@ -55,29 +47,25 @@
                 </table>
             </section>
 
-            <!-- Introduction -->
-            <section>
-                <section>
-                    <h2>Introduction</h2>
-                    <ul>
-                        <li>Elm and friends</li>
-                        <li>Build a community</li>
-                        <li>Adjust to the needs</li>
-                        <li>Have some fun!</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Elm Netherlands <br>+ <br>Elm Amsterdam</h3>
-                </section>
-                <section>
-                    <h3>Today</h3>
-                </section>
-            </section>
-
             <!-- What is Elm -->
             <section>
                 <section>
                     <h2>What?</h2>
+                </section>
+                <section>
+                    <table>
+                        <tr>
+                            <td style="border-bottom: 0px solid;">
+                                <img width="300" src="https://avatars2.githubusercontent.com/u/1658058?v=3&s=460">
+                            </td>
+                            <td style="border-bottom: 0px solid;">
+                                <img width="300" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/360px-Harvard_shield_wreath.svg.png">
+                            </td>
+                            <td>
+                                <img width="300" src="http://edtechreview.in/images/noredink_review_tool_for_grammar_and_writing_skills.png">
+                            </td>
+                        </tr>
+                    </table>
                 </section>
                 <section>
                     <h3>Buzzword Bingo</h3>
@@ -91,26 +79,7 @@
                         <li class="fragment">Virtual DOM</li>
                     </ul>
                 </section>
-                <section>
-                    <table>
-                        <tr>
-                            <td style="border-bottom: 0px solid;">
-                                <img width="300" src="https://avatars2.githubusercontent.com/u/1658058?v=3&s=460">
-                            </td>
-                            <td style="border-bottom: 0px solid;">
-                                <img width="300" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Harvard_Wreath_Logo_1.svg/1051px-Harvard_Wreath_Logo_1.svg.png">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img width="300" src="http://warehouse.lococock.com/free-download/logo/prezi/Prezi-Logo-Transparent-1080p.svg">
-                            </td>
-                            <td>
-                                <img width="300" src="http://edtechreview.in/images/noredink_review_tool_for_grammar_and_writing_skills.png">
-                            </td>
-                        </tr>
-                    </table>
-                </section>
+
             </section>
 
             <!-- Why  -->
@@ -146,15 +115,18 @@
                         Designed to solve common problems.
                     </blockquote>
                     <ul>
-                        <li>Package manager</li>
-                        <li>Formatting</li>
+                        <li class="fragment">Package manager</li>
+                        <li class="fragment">Formatting</li>
+                        <li class="fragment">Pub-Sub systems</li>
+                        <li class="fragment">Working in teams</li>
+                        <li class="fragment">WebAssembly</li>
                     </ul>
                 </section>
                 <section>
                     <blockquote>
                         We can assume certain things from our software, thus it would require less testing.
                     </blockquote>
-                    <img src="images/dangerously.jpg" width="400">
+                    <img  class="fragment" src="images/dangerously.jpg" width="400">
                 </section>
             </section>
 
@@ -208,29 +180,27 @@
                 </section>
                 <section>
                     <h3>A traffic light</h3>
-                    <div >
-                      <img src="images/whiteboard/basic.jpg" alt="" />
-                      <img class="fragment" style="right: 20px; position: absolute; width: 350px" src="images/skills.jpg" alt="" />
-                    </div>
+                    <small><i>Show the drawing skills :p</i></small>
                 </section>
-                <section>
+                <!-- <section>
                     <h3>Model the problem</h3>
-                    <img src="images/whiteboard/model.jpg" alt="" />
-                </section>
+                    <small><i>How can we represent this as data?</i></small>
+                </section> -->
                 <section>
                     <h3>Model the problem</h3>
                     <pre data-snippet-type="elm" data-snippet="code/lights/model.elm"></pre>
                 </section>
                 <section>
                     <h3>Which actions should I handle?</h3>
-                    <p>
+                    <small><i>What should the user be able to do?</i></small>
+                    <!-- <p>
                         <img src="images/whiteboard/messages.jpg" alt="" />
-                    </p>
+                    </p> -->
                 </section>
-                <section>
+                <!-- <section>
                     <h3>Which actions should I handle?</h3>
                     <pre data-snippet-type="elm" data-snippet="code/lights/actions.elm"></pre>
-                </section>
+                </section> -->
                 <section>
                     <h3><code>model</code>, <code>view</code> and <code>update</code></h3>
                     <img src="images/flip_book.jpg" alt="" />
@@ -259,18 +229,8 @@
                 <section>
                     <ul>
                         <li><strike>Easy</strike> Safe to extend</li>
-                        <li class="fragment">Reusable</li>
                         <li class="fragment">Purity enables property based testing</li>
                         <li class="fragment">Encapsulation</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Recap</h3>
-                    <ul>
-                        <li class="fragment">We cant break it, only implement the specs wrong</li>
-                        <li class="fragment">It is modular</li>
-                        <li class="fragment">Easy and safe to extend</li>
-                        <li class="fragment">The Elm Architecture: <code>model</code>, <code>view</code> and <code>update</code></li>
                     </ul>
                 </section>
                 <section>
@@ -290,7 +250,6 @@
                     <h2>'Why not'</h2>
                     <ul>
                         <li class="fragment">0.X -> 0.Y -> 0.Z</li>
-                        <li class="fragment">Documentation may be scarce</li>
                         <li class="fragment">It must fit the model</li>
                         <li class="fragment">'There is a library for that'</li>
                     </ul>
@@ -303,9 +262,7 @@
                     <ul>
                         <li><a href="http://elm-lang.org">http://elm-lang.org</a></li>
                         <li><a href="https://github.com/isRuslan/awesome-elm">https://github.com/isRuslan/awesome-elm</a></li>
-                        <li><a href="http://www.elmweekly.nl/">http://www.elmweekly.nl/</a></li>
-                        <li><a href="http://elmlang.herokuapp.com/">Elm Lang Slack</a></li>
-                        <li><a href="https://github.com/stil4m/elm-netherlands-meetup">https://github.com/stil4m/elm-netherlands-meetup</a></li>
+                        <li><a href="https://elmlang.slack.com/">Elm Slack</a></li>
                     </ul>
                 </section>
 
